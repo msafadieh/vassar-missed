@@ -1,0 +1,4 @@
+API_KEY = "" # Discourse API Key
+API_USERNAME = "" # Discourse user to act as
+URL = "" # Discourse URL
+CATEGORY_ID = "" # Category ID

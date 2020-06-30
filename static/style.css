@@ -1,0 +1,38 @@
+body {
+	margin: 0 auto;
+	max-width: 740px;
+	padding: 5rem 2.5rem;
+	background: #2c0a10;
+	color: white;
+	font-family: sans-serif;
+}
+
+textarea {
+	font-family: sans-serif;
+}
+
+img {
+	display: block;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+h1,
+.success {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+form {
+	display: flex;
+	flex-flow: column;
+}
+
+form > * {
+	margin-bottom: 1rem;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Vassar Missed - Brewer Town</title>
+	    <link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body>
+		<a href="https://brewer.town"><img alt="Brewer Town Logo" src="/static/logo.svg"></a>
+		<a href="/"><h1>Vassar Missed</h1></a>
+		{% if success %}
+		<p class="success">
+			Your submission has been received and is awaiting moderation!
+		</p>
+		{% else %}
+		<p>
+			Please write your confession below. Your submission is anonymous and not connected to either your Brewer Town or Vassar accounts in any way.
+		</p>
+		{% if error %}
+		<p class="error">
+			ERROR: {{ error }}
+		</p>
+		{% endif %}
+		<form action="/" method="post">
+			<label for="title">Title</label>
+			<input type="text" id="title" name="title" value="{{ title }}">
+			<label for="body">Confession</label>
+			<textarea id="body" name="body" rows="10">{{ body }}</textarea>
+		    <input type="submit" value="Submit">
+		</form>
+		{% endif %}
+	</body>
+</html>
