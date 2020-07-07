@@ -2,9 +2,9 @@ from flask import Flask, render_template, request
 import requests
 from config import API_KEY, API_USERNAME, CATEGORY_ID, URL
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@application.route("/", methods=["GET", "POST"])
 def index():
     params = {}
 
@@ -36,3 +36,5 @@ def index():
 
     return render_template("index.html", **params)
 
+if __name__ == "__main__":
+    application.run(host='0.0.0.0')
